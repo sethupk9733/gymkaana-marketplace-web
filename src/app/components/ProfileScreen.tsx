@@ -30,6 +30,7 @@ import { ActivePassCard } from "./ui/ActivePassCard";
 import { QRModal } from "./ui/QRModal";
 import { SupportChat } from "./SupportChat";
 import { fetchProfile, updateProfile as updateProfileApi, fetchMyBookings, updateBookingDate, cancelBooking } from "../lib/api";
+import { OWNER_URL } from "../config/api";
 
 export function ProfileScreen({
   onBack,
@@ -427,7 +428,7 @@ export function ProfileScreen({
 
                 <div className="text-center p-8">
                   <button
-                    onClick={() => window.open('http://localhost:10002', '_blank')}
+                    onClick={() => window.open(OWNER_URL, '_blank')}
                     className="text-[11px] font-black text-muted-foreground uppercase tracking-[0.3em] hover:text-primary transition-all underline underline-offset-8"
                   >
                     Open Partner Portal

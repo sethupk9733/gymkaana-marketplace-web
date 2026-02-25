@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { login, register, googleLogin, verifyOTP, resendOTP, forgotPassword, resetPassword } from "../lib/api";
 import { GoogleLogin } from '@react-oauth/google';
+import { OWNER_URL } from "../config/api";
 
 export function LoginSignupScreen({ onLogin, onBack }: { onLogin: () => void; onBack: () => void }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -503,7 +504,7 @@ export function LoginSignupScreen({ onLogin, onBack }: { onLogin: () => void; on
 
               <button
                 type="button"
-                onClick={() => window.open('http://localhost:10002', '_blank')}
+                onClick={() => window.open(OWNER_URL, '_blank')}
                 className="flex items-center gap-2 px-4 py-2 text-[10px] font-black text-muted-foreground uppercase tracking-widest hover:text-primary transition-colors"
               >
                 <Building className="w-4 h-4" />
